@@ -3,16 +3,20 @@
     "builds": [
         {
             "src": "app.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb"
-            }
+            "use": "@vercel/python"
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "app.py"
+    "functions": {
+        "api/**/*.py": {
+            "runtime": "python3.9"
         }
+    },
+    "ignore": [
+        "*.csv",
+        "*.log",
+        "*.md",
+        "__pycache__/",
+        "*.pkl",
+        "*.zip"
     ]
 }
