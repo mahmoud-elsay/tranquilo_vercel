@@ -5,13 +5,5 @@
             "src": "app.py",
             "use": "@vercel/python"
         }
-    ],
-    "ignore": [
-        "*.csv",
-        "*.log",
-        "*.md",
-        "__pycache__/",
-        "*.pkl",
-        "*.zip"
     ]
 }
