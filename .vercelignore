@@ -1,6 +1,0 @@
-*.csv
-*.log
-*.md
-__pycache__/
-*.pkl
-*.zip
