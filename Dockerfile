@@ -4,7 +4,7 @@ FROM python:3.9-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy only necessary files first to leverage caching
+# Copy only the requirements file to leverage Docker cache efficiently
 COPY requirements.txt /app/
 
 # Install dependencies in a virtual environment
@@ -15,7 +15,7 @@ RUN python -m venv /venv && \
 # Set the PATH to use the virtual environment
 ENV PATH="/venv/bin:$PATH"
 
-# Copy the rest of the project files into the container
+# Copy the rest of the application files
 COPY . /app/
 
 # Expose the port Flask will run on
