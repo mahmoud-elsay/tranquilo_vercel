@@ -1,0 +1,17 @@
+# Ignore Jupyter notebooks
+*.ipynb
+
+# Ignore CSV and other large data files
+*.csv
+*.log
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore model files (if not needed for deployment)
+*.pkl
+*.h5
+
+# Ignore Vercel-related config (optional)
+.vercelignore
